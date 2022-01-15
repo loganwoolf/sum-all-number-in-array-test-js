@@ -5,15 +5,12 @@ const sumItems = function(array, accumulator = 0) {
     // base case, no nesting
     if (!Array.isArray(item)) {
       accumulator += item;
-      console.log(accumulator);
     }
     // recursion case, array is encountered
     if (Array.isArray(item)) {
-      console.log('recursive call');
+      // pass accumulator to recursive call, and back out
       accumulator = sumItems(item, accumulator);
-
     }
-
   }
 
   return accumulator;
